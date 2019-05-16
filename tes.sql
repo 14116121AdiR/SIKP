@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2019 at 03:18 AM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Generation Time: May 16, 2019 at 05:27 AM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,8 +40,7 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `id_penulis`, `tanggal_publish`, `judul`, `isi`, `gambar`) VALUES
-(2, 98111012, '2019-05-15', 'Hal-hal yang Perlu Diketahui Mahasiswa tentang Kerja Praktik', '<p><s>Kerja praktik atau <a href=\"https://www.kompasiana.com/tag/kp\">KP</a> adalah mata kuliah wajib bagi hampir seluruh jurusan perguruan tinggi di Indonesia. Kerja praktik menyediakan fasilitas bagi para calon <a href=\"https://www.kompasiana.com/tag/sarjana\">sarjana</a> untuk merasakan atmosfer dunia kerja ketika masa perkuliahan.&nbsp;</s></p>\r\n\r\n<p><s>Bagi sebagian orang, ini adalah kesempatan emas untuk mendalami keilmuan yang diminati. Bagi beberapa yang lain, ini adalah kesempatan untuk cari koneksi ke perusahaan idaman. Mungkin ada pula yang menganggap ini hanyalah mata kuliah</s> yang harus diselesaikan dengan segera. Yang manapun kamu, Saya harap tulisan ini bisa membantu melewati mata kuliah ini.</p>\r\n\r\n<p><strong>Cara mendapat perusahaan</strong></p>\r\n\r\n<p>Hal yang hampir pasti bikin stress dan was-was adalah proses sebelum kerja praktik. Bagaimana cara mendapat tempat kerja praktik di perusahaan? Perusahaan mana yang bagus? Proses memilih perusahaan sangat bergantung pada niat awalmu kerja praktik.</p>\r\n\r\n<p>Bagi kamu yang ingin mendalami keilmuan kamu, maka pilihanmu kemungkinan tinggal sedikit. Misal jika ingin masuk ke industri penerbangan, maka mungkin pilihan kamu tinggal Garuda, Dirgantara Indonesia, Angkasa Pura, atau perusahaan swasta lain di bidang aviasi.</p>\r\n\r\n<p>Bagi kamu yang ingin mencari koneksi ke perusahaan idamanmu agar mudah kerja setelah lulus, pilihan kamu lebih sedikit lagi. Tinggal<em>&nbsp;apply</em> ke perusahaan yang kamu idamkan, beres.</p>\r\n\r\n<p>Bagi kamu yang hanya ingin kerja praktik cepat selesai, saya sarankan jadikan kerja praktik sebagai kedok untuk liburan jalan-jalan. Cari tempat kerja praktik yang jauh dari tempat asal kamu. Bagi yang kuliah di Jawa, cari kesempatan hingga ke Indonesia Timur. Banyak perusahaan pertambangan dan <em>oil and gas</em> yang berada di <em>remote area</em>. Kapan lagi jalan-jalan jauh kalo bukan sekarang?</p>\r\n', 'gbr.jpg'),
-(3, 98111012, '2019-05-15', 'Perbedaan Teknik Informatika dan Sistem Informasi', '<p><strong>Terkadang ada pertanyaan seperti ini bagi calon mahasiswa yang mau mengambil jurusan kuliah atau program studi (prodi) tentang teknologi informasi: apakah mengambil &quot;TEKNIK INFORMATIKA&quot; atau &quot;SISTEM INFORMASI&quot;? Perbedaan dari jurusan teknik informatika dan sistem informasi mungkin mirip dengan perbedaan jurusan kedokteran dan kesehatan masyarakat. Yang satu lebih bersifat teknis, satunya lebih bersifat manajerial. Dokter bertugas mengobati orang sakit, sarjana kesehatan masyarakat bertugas mengelola rumah sakit. Misal menjadi kepala rumah sakit, puskesmas, atau lembaga kesehatan lain. Dikutip dari laman resmi Universitas Bina Nusantara dan Universitas Indonesia, berikut perbedaan dari kedua p<em>rodi tersebut: Teknik Informatika Kemampuan: Menekankan kemampuan dalam merancang dan mengembangkan ragam algoritma komputasi. Variasi nama prodi: Teknik Informatika, Ilmu Komputer, Ilmu Komputasi, Informatika, Ilmu Informatika, Matematika Komputasi, dan lain sebagainya. Kurikulum: Kurikulumnya sangat kental ilmu pengetahuan terkait logika matematika, komputasi, dan algoritma yang dalam model terapannya dinyatakan dalam pengembangan program komputer. Cakupan ilmu: Spektrumnya sangat beragam dari sangat teoritis dan algoritmis hingga bersifat sangat terapan seperti pengembanga</em>n robotika dan sistem cerdas. Cakupan bidang: Mencakup bidang komputasi meliputi pemrograman, perancangan dan analisis algoritma, arsitektur komputer, sistem operasi, jaringan komputer, teori komputasi, sistem cerdas, rekayasa perangkat lunak, analisis numerik, dsb. Tujuan: Dirancang untuk memenuhi kebutuhan terhadap tenaga-tenaga muda yang teram</strong>pil dan profesional di bidang Teknologi Informasi melalui pemanfaatan Ilmu Komputer, di antaranya desain algoritma dan implementasinya untuk mengembangkan perangkat lunak yang berkualitas hingga pemutakhiran aplikasi berbasis kecerdasan buatan, robotika, pengolahan informasi multimedia, keamanan informasi dan jaringan,', 'pppp.jpg');
+(2, 98111012, '2019-05-15', 'Hal-hal yang Perlu Diketahui Mahasiswa tentang Kerja Praktik', '<p><s>Kerja praktik atau <a href="https://www.kompasiana.com/tag/kp">KP</a> adalah mata kuliah wajib bagi hampir seluruh jurusan perguruan tinggi di Indonesia. Kerja praktik menyediakan fasilitas bagi para calon <a href="https://www.kompasiana.com/tag/sarjana">sarjana</a> untuk merasakan atmosfer dunia kerja ketika masa perkuliahan.&nbsp;</s></p>\r\n\r\n<p><s>Bagi sebagian orang, ini adalah kesempatan emas untuk mendalami keilmuan yang diminati. Bagi beberapa yang lain, ini adalah kesempatan untuk cari koneksi ke perusahaan idaman. Mungkin ada pula yang menganggap ini hanyalah mata kuliah</s> yang harus diselesaikan dengan segera. Yang manapun kamu, Saya harap tulisan ini bisa membantu melewati mata kuliah ini.</p>\r\n\r\n<p><strong>Cara mendapat perusahaan</strong></p>\r\n\r\n<p>Hal yang hampir pasti bikin stress dan was-was adalah proses sebelum kerja praktik. Bagaimana cara mendapat tempat kerja praktik di perusahaan? Perusahaan mana yang bagus? Proses memilih perusahaan sangat bergantung pada niat awalmu kerja praktik.</p>\r\n\r\n<p>Bagi kamu yang ingin mendalami keilmuan kamu, maka pilihanmu kemungkinan tinggal sedikit. Misal jika ingin masuk ke industri penerbangan, maka mungkin pilihan kamu tinggal Garuda, Dirgantara Indonesia, Angkasa Pura, atau perusahaan swasta lain di bidang aviasi.</p>\r\n\r\n<p>Bagi kamu yang ingin mencari koneksi ke perusahaan idamanmu agar mudah kerja setelah lulus, pilihan kamu lebih sedikit lagi. Tinggal<em>&nbsp;apply</em> ke perusahaan yang kamu idamkan, beres.</p>\r\n\r\n<p>Bagi kamu yang hanya ingin kerja praktik cepat selesai, saya sarankan jadikan kerja praktik sebagai kedok untuk liburan jalan-jalan. Cari tempat kerja praktik yang jauh dari tempat asal kamu. Bagi yang kuliah di Jawa, cari kesempatan hingga ke Indonesia Timur. Banyak perusahaan pertambangan dan <em>oil and gas</em> yang berada di <em>remote area</em>. Kapan lagi jalan-jalan jauh kalo bukan sekarang?</p>\r\n', 'gbr.jpg');
 
 -- --------------------------------------------------------
 
@@ -59,7 +56,7 @@ CREATE TABLE `daftar_kp` (
   `telp_instansi` varchar(15) NOT NULL,
   `div_dept` varchar(40) DEFAULT NULL,
   `bidang` set('-Pilih-','Software Engineer','Game Developer','System Analyst dan System Integrator','Konsultan IT','Database Engineer / Database Administrator','Web Engineer / Web Administrator','Programmer','Intelligent System Developer','Other') NOT NULL,
-  `posisi` set('-Pilih-','Front End Developer','Back End Developer','Data Analyst','Data Scientist','Quality Assurance','UI/UX Designer','Other') NOT NULL,
+  `posisi` set('-Pilih-','Front End Developer','Back End Developer','Data Analyst','Data Scientist','Quality Assurance','UI/UX Designer') NOT NULL,
   `transkrip` varchar(30) NOT NULL,
   `waktu_mulai` date NOT NULL,
   `waktu_selesai` date NOT NULL,
@@ -252,20 +249,17 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `id_artikel` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `daftar_kp`
 --
 ALTER TABLE `daftar_kp`
   MODIFY `id_pendaftarankp` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
 --
 -- AUTO_INCREMENT for table `daftar_seminar`
 --
 ALTER TABLE `daftar_seminar`
   MODIFY `id_seminar` int(5) NOT NULL AUTO_INCREMENT;
-
 --
 -- Constraints for dumped tables
 --
@@ -287,7 +281,6 @@ ALTER TABLE `daftar_kp`
 --
 ALTER TABLE `daftar_seminar`
   ADD CONSTRAINT `daftar_seminar_ibfk_1` FOREIGN KEY (`id_daftar_kp`) REFERENCES `daftar_kp` (`id_pendaftarankp`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
