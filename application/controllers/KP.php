@@ -661,7 +661,7 @@ class KP extends CI_Controller{
 		$val=$this->Site_model->ValidasiSeminar($id_seminar);
 		if($val){
           echo '<script>alert("Sukses");</script>';
-          $pendaftaran = $this->data_pendaftarseminar($id);
+          $pendaftaran = $this->data_pendaftarseminar($_POST['Nim']);
           $this->load->view('dosen/profil_seminar',$pendaftaran);
 		}else{
           echo '<script>alert("Gagal");</script>';

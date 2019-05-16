@@ -50,7 +50,8 @@
             <tr><td></td><td>Ruang Seminar</td><td>:</td><td><?php echo $ruangseminar_p; ?></td></tr>
             <tr><td></td><td>Status Validasi</td><td>:</td><td><?php echo $statusvalidasi_p; ?></td></tr>
             </table>
-            <form action="<?php echo site_url("KP/validasi_seminar/". $id_seminar) ?>" style="margin-top: 20px; margin-left: 20px">
+            <form method="post" action="<?php echo site_url("KP/validasi_seminar/". $id_seminar) ?>" style="margin-top: 20px; margin-left: 20px">
+              <input name ="Nim" type="hidden" class="form-control" required="" value= <?php echo $id_p; ?> >
               <button type="submit" value="Validasi" class="btn btn-info btn-lg"s style="background-color: #DAA520; color:white;">Validasi</button>           
             </form>
             </div>
