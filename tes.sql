@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2019 at 05:40 AM
+-- Generation Time: May 16, 2019 at 03:18 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -21,6 +21,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `tes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel`
+--
+
+CREATE TABLE `artikel` (
+  `id_artikel` int(5) NOT NULL,
+  `id_penulis` int(12) NOT NULL,
+  `tanggal_publish` date NOT NULL,
+  `judul` varchar(100) NOT NULL,
+  `isi` varchar(2000) NOT NULL,
+  `gambar` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `artikel`
+--
+
+INSERT INTO `artikel` (`id_artikel`, `id_penulis`, `tanggal_publish`, `judul`, `isi`, `gambar`) VALUES
+(2, 98111012, '2019-05-15', 'Hal-hal yang Perlu Diketahui Mahasiswa tentang Kerja Praktik', '<p><s>Kerja praktik atau <a href=\"https://www.kompasiana.com/tag/kp\">KP</a> adalah mata kuliah wajib bagi hampir seluruh jurusan perguruan tinggi di Indonesia. Kerja praktik menyediakan fasilitas bagi para calon <a href=\"https://www.kompasiana.com/tag/sarjana\">sarjana</a> untuk merasakan atmosfer dunia kerja ketika masa perkuliahan.&nbsp;</s></p>\r\n\r\n<p><s>Bagi sebagian orang, ini adalah kesempatan emas untuk mendalami keilmuan yang diminati. Bagi beberapa yang lain, ini adalah kesempatan untuk cari koneksi ke perusahaan idaman. Mungkin ada pula yang menganggap ini hanyalah mata kuliah</s> yang harus diselesaikan dengan segera. Yang manapun kamu, Saya harap tulisan ini bisa membantu melewati mata kuliah ini.</p>\r\n\r\n<p><strong>Cara mendapat perusahaan</strong></p>\r\n\r\n<p>Hal yang hampir pasti bikin stress dan was-was adalah proses sebelum kerja praktik. Bagaimana cara mendapat tempat kerja praktik di perusahaan? Perusahaan mana yang bagus? Proses memilih perusahaan sangat bergantung pada niat awalmu kerja praktik.</p>\r\n\r\n<p>Bagi kamu yang ingin mendalami keilmuan kamu, maka pilihanmu kemungkinan tinggal sedikit. Misal jika ingin masuk ke industri penerbangan, maka mungkin pilihan kamu tinggal Garuda, Dirgantara Indonesia, Angkasa Pura, atau perusahaan swasta lain di bidang aviasi.</p>\r\n\r\n<p>Bagi kamu yang ingin mencari koneksi ke perusahaan idamanmu agar mudah kerja setelah lulus, pilihan kamu lebih sedikit lagi. Tinggal<em>&nbsp;apply</em> ke perusahaan yang kamu idamkan, beres.</p>\r\n\r\n<p>Bagi kamu yang hanya ingin kerja praktik cepat selesai, saya sarankan jadikan kerja praktik sebagai kedok untuk liburan jalan-jalan. Cari tempat kerja praktik yang jauh dari tempat asal kamu. Bagi yang kuliah di Jawa, cari kesempatan hingga ke Indonesia Timur. Banyak perusahaan pertambangan dan <em>oil and gas</em> yang berada di <em>remote area</em>. Kapan lagi jalan-jalan jauh kalo bukan sekarang?</p>\r\n', 'gbr.jpg'),
+(3, 98111012, '2019-05-15', 'Perbedaan Teknik Informatika dan Sistem Informasi', '<p><strong>Terkadang ada pertanyaan seperti ini bagi calon mahasiswa yang mau mengambil jurusan kuliah atau program studi (prodi) tentang teknologi informasi: apakah mengambil &quot;TEKNIK INFORMATIKA&quot; atau &quot;SISTEM INFORMASI&quot;? Perbedaan dari jurusan teknik informatika dan sistem informasi mungkin mirip dengan perbedaan jurusan kedokteran dan kesehatan masyarakat. Yang satu lebih bersifat teknis, satunya lebih bersifat manajerial. Dokter bertugas mengobati orang sakit, sarjana kesehatan masyarakat bertugas mengelola rumah sakit. Misal menjadi kepala rumah sakit, puskesmas, atau lembaga kesehatan lain. Dikutip dari laman resmi Universitas Bina Nusantara dan Universitas Indonesia, berikut perbedaan dari kedua p<em>rodi tersebut: Teknik Informatika Kemampuan: Menekankan kemampuan dalam merancang dan mengembangkan ragam algoritma komputasi. Variasi nama prodi: Teknik Informatika, Ilmu Komputer, Ilmu Komputasi, Informatika, Ilmu Informatika, Matematika Komputasi, dan lain sebagainya. Kurikulum: Kurikulumnya sangat kental ilmu pengetahuan terkait logika matematika, komputasi, dan algoritma yang dalam model terapannya dinyatakan dalam pengembangan program komputer. Cakupan ilmu: Spektrumnya sangat beragam dari sangat teoritis dan algoritmis hingga bersifat sangat terapan seperti pengembanga</em>n robotika dan sistem cerdas. Cakupan bidang: Mencakup bidang komputasi meliputi pemrograman, perancangan dan analisis algoritma, arsitektur komputer, sistem operasi, jaringan komputer, teori komputasi, sistem cerdas, rekayasa perangkat lunak, analisis numerik, dsb. Tujuan: Dirancang untuk memenuhi kebutuhan terhadap tenaga-tenaga muda yang teram</strong>pil dan profesional di bidang Teknologi Informasi melalui pemanfaatan Ilmu Komputer, di antaranya desain algoritma dan implementasinya untuk mengembangkan perangkat lunak yang berkualitas hingga pemutakhiran aplikasi berbasis kecerdasan buatan, robotika, pengolahan informasi multimedia, keamanan informasi dan jaringan,', 'pppp.jpg');
 
 -- --------------------------------------------------------
 
@@ -53,8 +76,8 @@ CREATE TABLE `daftar_kp` (
 
 INSERT INTO `daftar_kp` (`id_pendaftarankp`, `nim`, `nama_instansi`, `alamat_instansi`, `telp_instansi`, `div_dept`, `bidang`, `posisi`, `transkrip`, `waktu_mulai`, `waktu_selesai`, `dosen_pembimbing`, `balasan_instansi`, `surat_balasan`, `st_validasi`, `st_pendaftaran`) VALUES
 (21, '14115019', 'pt jaya bakery', 'jalan asia afrika , bandung', '072134567234', 'Teknologi informasi dan komunkasi', 'Software Engineer', 'Front End Developer', '141161216.pdf', '2019-05-03', '2019-05-03', 'Imam Ekowicaksono, S.Si., M.Si', NULL, NULL, 'belum', 'proses'),
-(22, '14115029', 'Tokopedia', 'Jalan RA.Kartini n0 134 Jakarta', '072143567289', 'Mobile apps', 'Software Engineer', 'Back End Developer', 'transkrip_ican.pdf', '2019-05-15', '2019-05-15', 'Amirul Iqbal, S.Kom., M.Eng', NULL, NULL, 'sudah', 'proses'),
-(23, '14115021', 'PT. Bukalapak Nusantara Informatika', 'Jalan Diponegoro No123 Jakarta Selatan', '0721435627182', 'Teknologi Informasi dan Komunikasi', 'Konsultan IT', 'Back End Developer', 'transkrip1.pdf', '2019-05-01', '2019-05-01', 'Imam Ekowicaksono, S.Si., M.Si', 'true', 'Surat_Balasan1.pdf', 'sudah', 'selesai');
+(23, '14115021', 'PT. Bukalapak Nusantara Informatika', 'Jalan Diponegoro No123 Jakarta Selatan', '0721435627182', 'Teknologi Informasi dan Komunikasi', 'Konsultan IT', 'Back End Developer', 'transkrip1.pdf', '2019-05-01', '2019-05-01', 'Imam Ekowicaksono, S.Si., M.Si', 'true', 'Surat_Balasan1.pdf', 'sudah', 'selesai'),
+(24, '14115029', 'PT. dj corporation', 'Jln. wr supratman kedaton bandar lampung', '072134566789', 'Pengembangan dtabaase', 'Database Engineer / Database Administrator', 'Data Scientist', 'transkrip2.pdf', '2019-05-16', '2019-05-31', NULL, NULL, NULL, 'belum', 'proses');
 
 -- --------------------------------------------------------
 
@@ -122,7 +145,7 @@ CREATE TABLE `tbl_mhs` (
 INSERT INTO `tbl_mhs` (`id`, `prodi`, `username`, `nama`, `jenis_kelamin`, `telp`, `alamat`, `foto`) VALUES
 ('14115019', 'IF', 'kurnia.14116001@student.itera.ac.id', 'kurnia', 'L', '082278301833', 'Kos FKPM', 'kurniapp.jpg'),
 ('14115021', 'IF', 'Ichsan.14116002@student.itera.ac.id', 'Ichsan', 'L', '082123339887', 'Kos. Pak Aji Squad', 'PP.jpg'),
-('14115029', 'IF', 'tobi.1415029@student.itera.ac.id', 'Tobi Santoso', 'L', '081247594248', 'FKPM', 'a.png');
+('14115029', 'IF', 'tobi.1415029@student.itera.ac.id', 'Tobi Santoso', 'L', '081247594248', 'FKPM', 'PP1.jpg');
 
 -- --------------------------------------------------------
 
@@ -177,6 +200,13 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `type`, `active`) VALUES
 --
 
 --
+-- Indexes for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id_artikel`),
+  ADD KEY `id_penulis` (`id_penulis`);
+
+--
 -- Indexes for table `daftar_kp`
 --
 ALTER TABLE `daftar_kp`
@@ -219,20 +249,32 @@ ALTER TABLE `tbl_user`
 --
 
 --
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `id_artikel` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `daftar_kp`
 --
 ALTER TABLE `daftar_kp`
-  MODIFY `id_pendaftarankp` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_pendaftarankp` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `daftar_seminar`
 --
 ALTER TABLE `daftar_seminar`
-  MODIFY `id_seminar` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_seminar` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD CONSTRAINT `artikel_ibfk_1` FOREIGN KEY (`id_penulis`) REFERENCES `tbl_staff` (`id`);
 
 --
 -- Constraints for table `daftar_kp`
