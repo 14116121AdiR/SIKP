@@ -160,7 +160,7 @@ header {
 .box{
 	border-radius: 2%;
 	width: 160px;
-	height: 130px;
+	height: 150px;
 	display: inline-block;
 	margin-left: 30px;
 }
@@ -174,9 +174,13 @@ header {
 	width: 150px;
 	height: 40px;
 	text-align: center;
-	color: white;
+	color: #fff;
+	font-weight: bold;
 	margin-left: 5px;
+	margin-top: -30px;
 }
+
+
 
 .biodata tr{
 	border-top: 1px solid #e3e3e3;
@@ -186,4 +190,9 @@ header {
 	width: 1000px;
 	margin-top: 70px;
 	margin-left: 40px;
+}
+
+hr.style{
+	width: 100%;
+	border-top: 3px solid #fff;
 }

@@ -39,20 +39,34 @@
 
         <div class="col-sm-6">
           <div class="info" >
+            
             <div class="box" style="background: #ffea00">
               <img src="<?=base_url()?>assets/img/kp.png">
+              <h5 style="margin-top: -1px; margin-bottom: -10px; text-align: center; color: #fff; font-weight: bold; ">Instansi</h5>
+              <hr class="style">
               <p><br><?php echo $this->session->userdata('info_kp') ?><br></p>
             </div>
+
+       
             <div class="box" style="background: #ffb600">
               <img src="<?=base_url()?>assets/img/pembimbing.png">
+              <h5 style="margin-top: -1px; margin-bottom: -10px; text-align: center; color: #fff; font-weight: bold;">Pembimbing</h5>
+              <hr class="style">
               <p><br><?php echo $this->session->userdata('info_pem') ?><br></p>
             </div>
+
             <div class="box" style="background: #ff7200">
               <img src="<?=base_url()?>assets/img/seminar.png">
+              <h5 style="margin-top: -1px; margin-bottom: -10px; text-align: center; color: #fff; font-weight: bold;">Jadwal Seminar</h5>
+              <hr class="style">
               <p><br><?php echo $this->session->userdata('info_sem1').' / '.$this->session->userdata('info_sem2') ?><br></p>
             </div>
+
+
             <div class="box" style="background: #ff3600">
               <img src="<?=base_url()?>assets/img/laporan.png">
+              <h5 style="margin-top: -1px; margin-bottom: -10px; text-align: center; color: #fff; font-weight: bold;">Judul Seminar</h5>
+              <hr class="style">
               <p><br><?php echo $this->session->userdata('info_lap') ?><br></p>
             </div>         
           </div>
