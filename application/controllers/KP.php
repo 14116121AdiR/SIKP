@@ -316,13 +316,13 @@ class KP extends CI_Controller{
 		if($res){
 			$data=$this->data_pendaftarkp($value['nim']);
 			if($data){
-			echo '<script>alert("Pendaftaran Berhasil");</script>';
+			echo '<script>alert("Pendaftaran KP berhasil");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		   }
 		}
 		else{
 			$data=array('pendaftaran_p'=>NULL);
-			echo '<script>alert("Pendaftaran Gagal");</script>';
+			echo '<script>alert("Pendaftaran KP gagal");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		}
 		}
@@ -371,12 +371,12 @@ class KP extends CI_Controller{
 		if($res){
 			$data=$this->data_pendaftarkp($value['nim']);
 			if($data){
-			echo '<script>alert("Pendaftaran Berhasil");</script>';
+			echo '<script>alert("Pendaftaran KP berhasil");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		   }
 		}
 		else{
-			echo '<script>alert("Pendaftaran Gagal");</script>';
+			echo '<script>alert("Pendaftaran KP gagal");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		}
 		}
@@ -422,11 +422,11 @@ class KP extends CI_Controller{
 				'id_kp'=>$_POST['id_daftar_kp'],
 				'res' => $res
 				);
-			echo '<script>alert("Pendaftaran Berhasil");</script>';
+			echo '<script>alert("Pendaftaran seminar KP berhasil");</script>';
 			$this->datamhsdashboard($this->session->userdata('username'));
 		}
 		else{
-			echo '<script>alert("Pendaftaran Gagal");</script>';
+			echo '<script>alert("Pendaftaran seminar KP gagal");</script>';
 			$this->load->view('mhs/DaftarSeminarKP',$data);
 		}
 	  }else{
@@ -643,11 +643,11 @@ class KP extends CI_Controller{
 		$this->load->model('Site_model');
 		$val=$this->Site_model->ValidasiDosen($id,'tolak','gagal');
 		if($val){
-          echo '<script>alert("Sukses");</script>';
+          echo '<script>alert("Berhasil menolak validasi pendaftaran KP");</script>';
           $pendaftaran = $this->data_pendaftarkp($id);
           $this->load->view('dosen/Profile_pendaftar',$pendaftaran);
 		}else{
-          echo '<script>alert("Gagal");</script>';
+          echo '<script>alert("Gagal menolak validasi pendaftaran KP");</script>';
 		}
 	  }else{
 	  	$this->load->view('Login');
@@ -660,11 +660,11 @@ class KP extends CI_Controller{
 		$this->load->model('Site_model');
 		$val=$this->Site_model->ValidasiSeminar($id_seminar);
 		if($val){
-          echo '<script>alert("Sukses");</script>';
+          echo '<script>alert("Sukses validasi pendaftaran seminar KP");</script>';
           $pendaftaran = $this->data_pendaftarseminar($_POST['Nim']);
           $this->load->view('dosen/profil_seminar',$pendaftaran);
 		}else{
-          echo '<script>alert("Gagal");</script>';
+          echo '<script>alert("Gagal validasi pendaftaran seminar KP");</script>';
 		}
 	  }else{
 	  	$this->load->view('Login');
@@ -718,11 +718,11 @@ class KP extends CI_Controller{
 			);
 		$res=$this->Site_model->ubahdata_kp($id_kp,$value);
 		if($res){
-			echo '<script>alert("Pendaftaran Berhasil");</script>';
+			echo '<script>alert("Pendaftaran KP berhasil");</script>';
 			$this->load->view('staff/Staff_dashboard');
 		}
 		else{
-			echo '<script>alert("Pendaftaran Gagal");</script>';
+			echo '<script>alert("Pendaftaran KP gagal");</script>';
 			$this->load->view('staff/Staff_dashboard');
 		}
 	  }else{
@@ -760,12 +760,12 @@ class KP extends CI_Controller{
 		if($res){
 			$data=$this->data_pendaftarkp($this->session->userdata('id'));
 			if($data){
-			echo '<script>alert("Pendaftaran Berhasil");</script>';
+			echo '<script>alert("Pendaftaran KP berhasil");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		    }
 		}
 		else{
-			echo '<script>alert("Pendaftaran Gagal");</script>';
+			echo '<script>alert("Pendaftaran KP gagal");</script>';
 			$this->load->view('mhs/DaftarKP',$data);
 		}
 		}
@@ -807,11 +807,11 @@ class KP extends CI_Controller{
 		$this->load->model('Site_model');
 		$val=$this->Site_model->ValidasiDosen($id,'sudah','proses');
 		if($val){
-          echo '<script>alert("Sukses");</script>';
+          echo '<script>alert("Sukses validasi pendaftaran KP");</script>';
           $pendaftaran = $this->data_pendaftarkp($id);
           $this->load->view('dosen/Profile_pendaftar',$pendaftaran);
 		}else{
-          echo '<script>alert("Gagal");</script>';
+          echo '<script>alert("Gagal validasi pendaftaran KP");</script>';
 		}
 	  }else{
 	  	$this->load->view('Login');
@@ -980,11 +980,11 @@ public function submit_artikel(){
 			);
 		$res=$this->Site_model->daftar($tbl,$value);
 		if($res>=1){
-			echo '<script>alert("Berhasil");</script>';
+			echo '<script>alert("Berhasil membuat artikel");</script>';
 			$this->artikel();
 		}
 		else{
-			echo '<script>alert("Gagal");</script>';
+			echo '<script>alert("Gagal membuat artikel");</script>';
 			$this->artikel();
 		}
 
