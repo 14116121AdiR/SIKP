@@ -57,6 +57,11 @@ public function __construct()
 		$query = $this->db->query("SELECT * FROM artikel INNER JOIN tbl_staff ON artikel.id_penulis = tbl_staff.id")->result_array();
 		return $query;
 	}
+
+	public function getdataartikel($id){
+		$query = $this->db->query("SELECT * FROM artikel WHERE artikel.id_artikel = $id ")->result_array();
+		return $query;
+	}
 	
 	public function ValidasiDosen($nim,$status,$pend){
 		$data = array('st_validasi' =>$status, 'st_pendaftaran'=>$pend);

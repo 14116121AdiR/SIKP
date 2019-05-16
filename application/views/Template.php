@@ -94,20 +94,29 @@
     <div class="container">
       <div class="row content">
       <div class="row">
+
         <div class = "banner">
-          <img src="<?=base_url()?>assets/img/banner.jpg" >
+         <img src="<?=base_url()?>assets/img/banner2.jpg">
         </div>
 
         <hr class="style1">
 
           <div class = "left_content">
-          <h3>Informasi Magang</h3>
-            <table class="table" style="margin-top: 20px;">
+            <div class="title">
+              <h4>Informasi Magang</h4>
+            </div>
+          
+            <table class="table" style="margin-top: 10px;">
             <?php      
-            foreach ($this->session->userdata('art') as $data => $r){ ?>
+            foreach ($this->session->userdata('art') as $data => $r){ 
+              $tanggal = $r['tanggal_publish'];
+              ?>
             <tr >
-              <td><img src="<?=base_url()?>assets/upload/artikel/<?php echo $r['gambar'];?>" style="width: 140px; height: 100px; border: 3px solid #DAA520; margin-left: 10px; "></td>
-              <td ><h4><?php echo $r['judul']  ?></h4></td>
+              <td><img src="<?=base_url()?>assets/upload/artikel/<?php echo $r['gambar'];?>" style="width: 140px; height: 100px; margin-left: 10px; "></td>
+              <td >
+                <a href="<?php echo site_url('KP/artikel_page/'. $r['id_artikel']) ?>" style="text-decoration: none; color: #000"><h4 style="padding-right: 10px"><?php echo $r['judul']  ?></h4></a>
+                <h5>Informatika ITERA | <?php echo date("d F Y", strtotime($tanggal)) ?></h5>
+              </td>
             </tr>
            <?php } ?>
           </table>
@@ -117,9 +126,11 @@
         
         </div>
 
-        <div class = "right_content">          
-          <h3>Jadwal Seminar KP</h3>
-          <table class="table" style="margin-top: 20px;">
+        <div class = "right_content">
+          <div class="title1">
+              <h4>Jadwal Seminar KP</h4>
+          </div>
+          <table class="table" style="margin-top: 10px;">
           <tr>
             <th width="100px">Nama</th>
             <th width="120px">Judul</th>

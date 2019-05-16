@@ -55,9 +55,9 @@ nav ul li:hover{
 
 
 .banner {
-	background-color: #cccccc;
+	background-color: #FBAB25;
 	height: 320px;
-	width: 95%;
+	width: 1100px;
 	margin-left: 25px;
 	margin-bottom: 0px;
 	margin-top: 50px;
@@ -146,35 +146,47 @@ hr.style1{
 
 .left_content{
 	height: 500px;
-	width: 52%;
+	width: 54%;
 	margin-left: 25px;
 	margin-bottom: 0px;
 	float: left;
-	border: 3px solid brown;
 	margin-top: 50px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
-.left_content h3{
-	color: black;
+.title h4{
+	color: #fff;
 	margin-left: 27px;
-	margin-top: 5px;
-	margin-bottom: -5px;
+	padding-top: 8px;
+	font-weight: bold;
 }
 
-.right_content h3{
-	color: black;
-	margin-left: 15px;
-	margin-top: 5px;
-	margin-bottom: -5px;
+.title1 h4{
+	color: #fff;
+	margin-left: 27px;
+	padding-top: 8px;
+	font-weight: bold;
 }
+.title1{
+	background: #DAA520;
+	height:  40px;
+	margin-top: -13px;
+}
+
+.title{
+	background: #DAA520;
+	height:  40px;
+	margin-top: -23px;
+}
+
 
 .right_content{
-	border: 3px solid brown;
-	height: 500px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	height: 505px;
 	width: 40%;
 	margin-bottom: 0px;
 	float: right;
-	margin-right: 30px;
-	margin-top: -500px;
+	margin-right: 15px;
+	margin-top: -510px;
 }
 
 

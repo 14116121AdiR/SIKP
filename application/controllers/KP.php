@@ -993,6 +993,20 @@ public function submit_artikel(){
 	}
 }
 
+public function artikel_page($id){
+	$this->load->model('Site_model');
+	$value = $this->Site_model->getdataartikel($id);
+	foreach ($value as $key => $data) {
+		$art = array
+		       ('judul' => $data['judul'] ,
+		        'isi' => $data['isi'] ,
+		        'tanggal' => $data['tanggal_publish'] ,
+		        'gambar' => $data['gambar'] 
+		       );
+	}
+	$this->load->view('staff/artikel_page',$art);
+}
+
 
  
 }

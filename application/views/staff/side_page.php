@@ -10,7 +10,6 @@
                   <ul style="list-style-type: none;">
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/profile" style="color: #555; text-decoration: none; display: block;">List Pendaftar KP</a></li>
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/listmahasiswa" style="color: #555; text-decoration: none; display: block;">List Mahasiswa</a></li>
-                   <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/" style="color: #555; text-decoration: none; display: block;">Gambar</a></li>
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/artikel" style="color: #555; text-decoration: none; display: block;">Pengumuman</a></li>
                    <li class="list-group-item"><a href="<?=base_url()?>index.php/KP/index" style="color: #555; text-decoration: none; display: block;">Logout</a></li>
                    </ul>
