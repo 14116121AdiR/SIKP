@@ -29,7 +29,6 @@
               <option value="Web Engineer / Web Administrator">Web Engineer / Web Administrator</option>
               <option value="Programmer">Programmer</option>
               <option value="Intelligent System Developer">Intelligent System Developer</option>
-              <option value="Other">Other</option>
             </select>
           </div>
           <div class="form-group">
@@ -42,7 +41,6 @@
               <option value="Data Scientist">Data Scientist</option>
               <option value="Quality Assurance">Quality Assurance</option>
               <option value="UI/UX Designer">UI/UX Designer</option>
-              <option value="Other">Other</option>
             </select>
           </div>
           <div class="form-group">
