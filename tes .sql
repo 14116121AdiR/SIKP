@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2019 at 05:27 AM
+-- Generation Time: May 16, 2019 at 06:31 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.0
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `artikel` (
   `id_artikel` int(5) NOT NULL,
-  `id_penulis` int(12) NOT NULL,
+  `id_penulis` bigint(20) NOT NULL,
   `tanggal_publish` date NOT NULL,
   `judul` varchar(100) NOT NULL,
   `isi` varchar(2000) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `id_penulis`, `tanggal_publish`, `judul`, `isi`, `gambar`) VALUES
-(2, 98111012, '2019-05-15', 'Hal-hal yang Perlu Diketahui Mahasiswa tentang Kerja Praktik', '<p><s>Kerja praktik atau <a href="https://www.kompasiana.com/tag/kp">KP</a> adalah mata kuliah wajib bagi hampir seluruh jurusan perguruan tinggi di Indonesia. Kerja praktik menyediakan fasilitas bagi para calon <a href="https://www.kompasiana.com/tag/sarjana">sarjana</a> untuk merasakan atmosfer dunia kerja ketika masa perkuliahan.&nbsp;</s></p>\r\n\r\n<p><s>Bagi sebagian orang, ini adalah kesempatan emas untuk mendalami keilmuan yang diminati. Bagi beberapa yang lain, ini adalah kesempatan untuk cari koneksi ke perusahaan idaman. Mungkin ada pula yang menganggap ini hanyalah mata kuliah</s> yang harus diselesaikan dengan segera. Yang manapun kamu, Saya harap tulisan ini bisa membantu melewati mata kuliah ini.</p>\r\n\r\n<p><strong>Cara mendapat perusahaan</strong></p>\r\n\r\n<p>Hal yang hampir pasti bikin stress dan was-was adalah proses sebelum kerja praktik. Bagaimana cara mendapat tempat kerja praktik di perusahaan? Perusahaan mana yang bagus? Proses memilih perusahaan sangat bergantung pada niat awalmu kerja praktik.</p>\r\n\r\n<p>Bagi kamu yang ingin mendalami keilmuan kamu, maka pilihanmu kemungkinan tinggal sedikit. Misal jika ingin masuk ke industri penerbangan, maka mungkin pilihan kamu tinggal Garuda, Dirgantara Indonesia, Angkasa Pura, atau perusahaan swasta lain di bidang aviasi.</p>\r\n\r\n<p>Bagi kamu yang ingin mencari koneksi ke perusahaan idamanmu agar mudah kerja setelah lulus, pilihan kamu lebih sedikit lagi. Tinggal<em>&nbsp;apply</em> ke perusahaan yang kamu idamkan, beres.</p>\r\n\r\n<p>Bagi kamu yang hanya ingin kerja praktik cepat selesai, saya sarankan jadikan kerja praktik sebagai kedok untuk liburan jalan-jalan. Cari tempat kerja praktik yang jauh dari tempat asal kamu. Bagi yang kuliah di Jawa, cari kesempatan hingga ke Indonesia Timur. Banyak perusahaan pertambangan dan <em>oil and gas</em> yang berada di <em>remote area</em>. Kapan lagi jalan-jalan jauh kalo bukan sekarang?</p>\r\n', 'gbr.jpg');
+(2, 1988112520181120, '2019-05-15', 'Hal-hal yang Perlu Diketahui Mahasiswa tentang Kerja Praktik', '<p><s>Kerja praktik atau <a href="https://www.kompasiana.com/tag/kp">KP</a> adalah mata kuliah wajib bagi hampir seluruh jurusan perguruan tinggi di Indonesia. Kerja praktik menyediakan fasilitas bagi para calon <a href="https://www.kompasiana.com/tag/sarjana">sarjana</a> untuk merasakan atmosfer dunia kerja ketika masa perkuliahan.&nbsp;</s></p>\r\n\r\n<p><s>Bagi sebagian orang, ini adalah kesempatan emas untuk mendalami keilmuan yang diminati. Bagi beberapa yang lain, ini adalah kesempatan untuk cari koneksi ke perusahaan idaman. Mungkin ada pula yang menganggap ini hanyalah mata kuliah</s> yang harus diselesaikan dengan segera. Yang manapun kamu, Saya harap tulisan ini bisa membantu melewati mata kuliah ini.</p>\r\n\r\n<p><strong>Cara mendapat perusahaan</strong></p>\r\n\r\n<p>Hal yang hampir pasti bikin stress dan was-was adalah proses sebelum kerja praktik. Bagaimana cara mendapat tempat kerja praktik di perusahaan? Perusahaan mana yang bagus? Proses memilih perusahaan sangat bergantung pada niat awalmu kerja praktik.</p>\r\n\r\n<p>Bagi kamu yang ingin mendalami keilmuan kamu, maka pilihanmu kemungkinan tinggal sedikit. Misal jika ingin masuk ke industri penerbangan, maka mungkin pilihan kamu tinggal Garuda, Dirgantara Indonesia, Angkasa Pura, atau perusahaan swasta lain di bidang aviasi.</p>\r\n\r\n<p>Bagi kamu yang ingin mencari koneksi ke perusahaan idamanmu agar mudah kerja setelah lulus, pilihan kamu lebih sedikit lagi. Tinggal<em>&nbsp;apply</em> ke perusahaan yang kamu idamkan, beres.</p>\r\n\r\n<p>Bagi kamu yang hanya ingin kerja praktik cepat selesai, saya sarankan jadikan kerja praktik sebagai kedok untuk liburan jalan-jalan. Cari tempat kerja praktik yang jauh dari tempat asal kamu. Bagi yang kuliah di Jawa, cari kesempatan hingga ke Indonesia Timur. Banyak perusahaan pertambangan dan <em>oil and gas</em> yang berada di <em>remote area</em>. Kapan lagi jalan-jalan jauh kalo bukan sekarang?</p>\r\n', 'gbr.jpg');
 
 -- --------------------------------------------------------
 
@@ -55,7 +55,7 @@ CREATE TABLE `daftar_kp` (
   `alamat_instansi` varchar(100) NOT NULL,
   `telp_instansi` varchar(15) NOT NULL,
   `div_dept` varchar(40) DEFAULT NULL,
-  `bidang` set('-Pilih-','Software Engineer','Game Developer','System Analyst dan System Integrator','Konsultan IT','Database Engineer / Database Administrator','Web Engineer / Web Administrator','Programmer','Intelligent System Developer','Other') NOT NULL,
+  `bidang` set('-Pilih-','Software Engineer','Game Developer','System Analyst dan System Integrator','Konsultan IT','Database Engineer / Database Administrator','Web Engineer / Web Administrator','Programmer','Intelligent System Developer') NOT NULL,
   `posisi` set('-Pilih-','Front End Developer','Back End Developer','Data Analyst','Data Scientist','Quality Assurance','UI/UX Designer') NOT NULL,
   `transkrip` varchar(30) NOT NULL,
   `waktu_mulai` date NOT NULL,
@@ -102,7 +102,7 @@ CREATE TABLE `daftar_seminar` (
 
 CREATE TABLE `tbl_dosen` (
   `nama_dosen` varchar(50) NOT NULL,
-  `id` int(12) NOT NULL,
+  `id` bigint(20) NOT NULL,
   `jenis_kelamin` enum('L','P') NOT NULL,
   `username` varchar(35) NOT NULL,
   `jabatan` varchar(25) NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE `tbl_dosen` (
 --
 
 INSERT INTO `tbl_dosen` (`nama_dosen`, `id`, `jenis_kelamin`, `username`, `jabatan`, `status`, `alamat`, `foto`) VALUES
-('Meli', 18099919, 'L', 'meli@if.itera.ac.id', 'Dosen Informatika', 'kordinator', 'Bandar Lampung, Lampung.', 'meli.jpg');
+('Dr. Masayu Leylia Khodra, S.T., M.T.', 197604292008122001, 'P', 'masayu@informatika.org', 'Ketua Program Studi', 'Kaprodi', 'Bandar Lampung, Lampung.', 'foto_bu_masayu.jpg');
 
 -- --------------------------------------------------------
 
@@ -151,7 +151,7 @@ INSERT INTO `tbl_mhs` (`id`, `prodi`, `username`, `nama`, `jenis_kelamin`, `telp
 --
 
 CREATE TABLE `tbl_staff` (
-  `id` int(12) NOT NULL,
+  `id` bigint(20) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `jenis_kelamin` enum('L','P') DEFAULT NULL,
   `username` varchar(35) NOT NULL,
@@ -165,7 +165,7 @@ CREATE TABLE `tbl_staff` (
 --
 
 INSERT INTO `tbl_staff` (`id`, `nama`, `jenis_kelamin`, `username`, `jabatan`, `alamat`, `foto`) VALUES
-(98111012, 'Arum', 'L', 'arum@staff.itera.ac.id', 'Staff Jurusan', 'Kalianda, Lampung Selatan.', 'arum2.jpg');
+(1988112520181120, 'Randi Farmana Putra, S.Si., M.Si.', 'L', 'randi.putra@if.itera.ac.id', 'Staff Jurusan', 'Bandar Lampung, Lampung', 'foto_bu_masayu2');
 
 -- --------------------------------------------------------
 
@@ -174,7 +174,7 @@ INSERT INTO `tbl_staff` (`id`, `nama`, `jenis_kelamin`, `username`, `jabatan`, `
 --
 
 CREATE TABLE `tbl_user` (
-  `id` int(12) NOT NULL,
+  `id` bigint(20) NOT NULL,
   `username` varchar(35) NOT NULL,
   `password` varchar(10) NOT NULL,
   `type` varchar(5) NOT NULL,
@@ -189,8 +189,8 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `type`, `active`) VALUES
 (14115019, 'kurnia.14116001@student.itera.ac.id', 'adiadi', 'mhs', '1'),
 (14115021, 'Ichsan.14116002@student.itera.ac.id', 'icanican', 'mhs', '1'),
 (14115029, 'tobi.1415029@student.itera.ac.id', 'pw', 'mhs', '1'),
-(18099919, 'meli@if.itera.ac.id', '123456', 'dosen', '1'),
-(98111012, 'arum@staff.itera.ac.id', '12345678', 'staff', '1');
+(1988112520181120, 'randi.putra@if.itera.ac.id', 'staff', 'staff', '1'),
+(197604292008122001, 'masayu@informatika.org', 'dosen', 'dosen', '1');
 
 --
 -- Indexes for dumped tables
@@ -201,7 +201,8 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `type`, `active`) VALUES
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`id_artikel`),
-  ADD KEY `id_penulis` (`id_penulis`);
+  ADD KEY `id_penulis` (`id_penulis`),
+  ADD KEY `id_penulis_2` (`id_penulis`);
 
 --
 -- Indexes for table `daftar_kp`
@@ -263,12 +264,6 @@ ALTER TABLE `daftar_seminar`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `artikel`
---
-ALTER TABLE `artikel`
-  ADD CONSTRAINT `artikel_ibfk_1` FOREIGN KEY (`id_penulis`) REFERENCES `tbl_staff` (`id`);
 
 --
 -- Constraints for table `daftar_kp`
